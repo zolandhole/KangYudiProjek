@@ -40,13 +40,13 @@ import com.takwolf.android.lock9.Lock9View;
                 @Override
                 public void onFinish(String password) {
                     if (sharedPreferences.getString(AppLockConstants.PASSWORD, "").matches(password)) {
-                        Toast.makeText(getApplicationContext(), "Success : Pattern Match", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), "Berhasil : Pola Sesuai", Toast.LENGTH_SHORT).show();
                         Intent i = new Intent(PasswordActivity.this, HomeActivity.class);
                         startActivity(i);
                         finish();
 
                     } else {
-                        Toast.makeText(getApplicationContext(), "Wrong Pattern Try Again", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), "Pola salah, Coba lagi!", Toast.LENGTH_SHORT).show();
 
                     }
                 }

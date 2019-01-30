@@ -56,7 +56,7 @@ public class HomeActivity extends AppCompatActivity
 
         fragmentManager = getSupportFragmentManager();
 
-        getSupportActionBar().setTitle("All Applications");
+        getSupportActionBar().setTitle("Semua Aplikasi");
         Fragment f = AllAppFragment.newInstance(AppLockConstants.ALL_APPS);
         fragmentManager.beginTransaction().replace(R.id.fragment_container, f).commit();
 
@@ -72,7 +72,7 @@ public class HomeActivity extends AppCompatActivity
                 super.onBackPressed();
             } else {
                 fragmentManager.popBackStack();
-                getSupportActionBar().setTitle("All Applications");
+                getSupportActionBar().setTitle("Semua Aplikas");
                 Fragment f = AllAppFragment.newInstance(AppLockConstants.ALL_APPS);
                 fragmentManager.beginTransaction().replace(R.id.fragment_container, f).commit();
             }
@@ -96,30 +96,31 @@ public class HomeActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_all_apps) {
-            getSupportActionBar().setTitle("All Applications");
+            getSupportActionBar().setTitle("Semua Aplikas");
             Fragment f = AllAppFragment.newInstance(AppLockConstants.ALL_APPS);
             fragmentManager.beginTransaction().replace(R.id.fragment_container, f).commit();
         } else if (id == R.id.nav_locked_apps) {
-            getSupportActionBar().setTitle("Locked Applications");
+            getSupportActionBar().setTitle("Aplikasi Terkunci");
             Fragment f = AllAppFragment.newInstance(AppLockConstants.LOCKED);
             fragmentManager.beginTransaction().replace(R.id.fragment_container, f).commit();
 
 
         } else if (id == R.id.nav_unlocked_apps) {
-            getSupportActionBar().setTitle("Unlocked Applications");
+            getSupportActionBar().setTitle("Tidak Terkunci");
             Fragment f = AllAppFragment.newInstance(AppLockConstants.UNLOCKED);
             fragmentManager.beginTransaction().replace(R.id.fragment_container, f).commit();
 
         } else if (id == R.id.nav_change_pattern) {
-            getSupportActionBar().setTitle("Change Password");
+            getSupportActionBar().setTitle("Ganti kata sandi");
             Fragment f = PasswordFragment.newInstance();
             fragmentManager.beginTransaction().replace(R.id.fragment_container, f).commit();
 
-        }else if(id == R.id.nav_allow_access){
-            getSupportActionBar().setTitle("Allow Access");
-            Fragment f = SettingsFragment.newInstance();
-            fragmentManager.beginTransaction().replace(R.id.fragment_container, f).commit();
         }
+//        else if(id == R.id.nav_allow_access){
+//            getSupportActionBar().setTitle("Allow Access");
+//            Fragment f = SettingsFragment.newInstance();
+//            fragmentManager.beginTransaction().replace(R.id.fragment_container, f).commit();
+//        }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

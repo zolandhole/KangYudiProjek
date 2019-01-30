@@ -77,15 +77,15 @@ public class PasswordSetActivity extends AppCompatActivity {
                     enteredPassword = password;
                     isEnteringFirstTime = false;
                     isEnteringSecondTime = true;
-                    textView.setText("Re-Draw Pattern");
+                    textView.setText("Ulangi Pola");
                 } else if (isEnteringSecondTime) {
                     if (enteredPassword.matches(password)) {
                         confirmButton.setEnabled(true);
                     } else {
-                        Toast.makeText(getApplicationContext(), "Both Pattern did not match - Try again", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), "Kedua Pola tidak Sesuai - Coba Lagi", Toast.LENGTH_SHORT).show();
                         isEnteringFirstTime = true;
                         isEnteringSecondTime = false;
-                        textView.setText("Draw Pattern");
+                        textView.setText("Gambar Pola");
                         retryButton.setEnabled(false);
                     }
                 }

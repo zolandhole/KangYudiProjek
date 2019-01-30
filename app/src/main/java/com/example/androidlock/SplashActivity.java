@@ -18,6 +18,8 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.Window;
+import android.view.WindowManager;
 
 import com.example.androidlock.Services.AlarmReceiver;
 import com.example.androidlock.Services.AppCheckServices;
@@ -37,6 +39,10 @@ public class SplashActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         context = getApplicationContext();
+
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
         setContentView(R.layout.activity_splash);
 
 
@@ -147,8 +153,8 @@ public class SplashActivity extends AppCompatActivity {
             // Use the Builder class for convenient dialog construction
             AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
             builder.setMessage(R.string.ovarlay_permission_description)
-                    .setTitle("Overlay Permission")
-                    .setPositiveButton("Allow", new DialogInterface.OnClickListener() {
+                    .setTitle("Perizinan Overlay")
+                    .setPositiveButton("Izinkan", new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int id) {
                             // FIRE ZE MISSILES!
                             Intent intent = new Intent(Settings.ACTION_MANAGE_OVERLAY_PERMISSION,
@@ -169,8 +175,8 @@ public class SplashActivity extends AppCompatActivity {
             AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
 
             builder.setMessage(R.string.usage_data_access_description)
-                    .setTitle("Usage Access Permission")
-                    .setPositiveButton("Allow", new DialogInterface.OnClickListener() {
+                    .setTitle("Izin Akses Penggunaan")
+                    .setPositiveButton("Izinkan", new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int id) {
                             // FIRE ZE MISSILES!
                             startActivityForResult(
@@ -178,6 +184,8 @@ public class SplashActivity extends AppCompatActivity {
                                     MY_PERMISSIONS_REQUEST_PACKAGE_USAGE_STATS);
                         }
                     });
+
+
 
             // Create the AlertDialog object and return it
             return builder.create();

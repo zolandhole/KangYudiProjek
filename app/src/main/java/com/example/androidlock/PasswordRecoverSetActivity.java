@@ -45,13 +45,13 @@ public class PasswordRecoverSetActivity extends AppCompatActivity {
 
 
         List<String> list = new ArrayList<String>();
-        list.add("Select your security question?");
-        list.add("What is your pet name?");
-        list.add("Who is your favorite teacher?");
-        list.add("Who is your favorite actor?");
-        list.add("Who is your favorite actress?");
-        list.add("Who is your favorite cricketer?");
-        list.add("Who is your favorite footballer?");
+        list.add("Pilih pertanyaan keamanan Anda?");
+        list.add("Siapa nama binatang peliharaanmu?");
+        list.add("Siapa guru Favoritmu?");
+        list.add("Siapa aktor favoritmu?");
+        list.add("Siapa aktris favoritmu?");
+        list.add("Apakah Makanan Kesukaanmu?");
+        list.add("Siapa pesepakbola favoritmu?");
 
         ArrayAdapter<String> stringArrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, list);
         stringArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -84,7 +84,7 @@ public class PasswordRecoverSetActivity extends AppCompatActivity {
                     startActivity(i);
                     finish();
                 } else {
-                    Toast.makeText(getApplicationContext(), "Please select a question and write an answer", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "Pilih pertanyaan dan tulis jawaban", Toast.LENGTH_SHORT).show();
                 }
 
             }

@@ -93,15 +93,15 @@ public class PasswordFragment extends Fragment {
                     enteredPassword = password;
                     isEnteringFirstTime = false;
                     isEnteringSecondTime = true;
-                    textView.setText("Re-Draw Pattern");
+                    textView.setText("Ulangi Pola");
                 } else if (isEnteringSecondTime) {
                     if (enteredPassword.matches(password)) {
                         confirmButton.setEnabled(true);
                     } else {
-                        Toast.makeText(getActivity(), "Both Pattern did not match - Try again", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getActivity(), "Kedua pola tidak sesuai - Ulangi lagi", Toast.LENGTH_SHORT).show();
                         isEnteringFirstTime = true;
                         isEnteringSecondTime = false;
-                        textView.setText("Draw Pattern");
+                        textView.setText("Gambar Pola");
                         retryButton.setEnabled(false);
                     }
                 }

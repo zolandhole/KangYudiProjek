@@ -1,18 +1,18 @@
 <resources>
-    <string name="app_name">AppLocker</string>
-    <string name="action_settings">Settings</string>
+    <string name="app_name">Aplikasi Pengunci</string>
+    <string name="action_settings">Pengaturan</string>
     <string name="hello_world">Hello world!</string>
 
-    <string name="action_password">Password Change</string>
-    <string name="draw_pattern">Draw pattern to unlock</string>
-    <string name="enter_password">Enter Password</string>
+    <string name="action_password">Ganti kata sandi</string>
+    <string name="draw_pattern">Gambar pola untuk membuka aplikasi</string>
+    <string name="enter_password">Masukan kata sandi</string>
     <string name="rate_us">Rate us</string>
 
     <string name="pref_def_delay_time" translatable="false">60</string>
 
-    <string name="locker_invalid_password">Wrong password</string>
+    <string name="locker_invalid_password">Kata sandi salah</string>
     <string name="click_to_show">Click to show BlurLockView</string>
-    <string name="answer">Enter your answer here</string>
+    <string name="answer">Masukan jawabanmu disini</string>
     <string name="title_activity_home">HomeActivity</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
@@ -93,6 +93,6 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="ovarlay_permission_description">Permit drawing over other apps</string>
-    <string name="usage_data_access_description">Allow applocker to monitor which other apps you use.</string>
+    <string name="ovarlay_permission_description">Izin menggambar di aplikasi lain</string>
+    <string name="usage_data_access_description">Izinkan memantau aplikasi lain yang Anda gunakan</string>
 </resources>

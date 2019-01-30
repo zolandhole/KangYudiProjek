@@ -49,7 +49,7 @@ public class AllAppFragment extends Fragment {
         View v = inflater.inflate(R.layout.fragment_all_apps, container, false);
 
         progressDialog = new ProgressDialog(getActivity());
-        progressDialog.setMessage("Loading Apps ...");
+        progressDialog.setMessage("Memuat Aplikasi ...");
 
         mRecyclerView = (RecyclerView) v.findViewById(R.id.my_recycler_view);
 

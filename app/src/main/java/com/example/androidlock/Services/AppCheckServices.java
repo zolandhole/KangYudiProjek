@@ -167,7 +167,7 @@ public class AppCheckServices extends Service {
                     dialog.dismiss();
 
                 } else {
-                    Toast.makeText(getApplicationContext(), "Wrong Pattern Try Again", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "Pola salah, Coba lagi!", Toast.LENGTH_SHORT).show();
 
                 }
             }
