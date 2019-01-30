@@ -63,13 +63,37 @@ public class AppCheckServices extends Service {
         imageView = new ImageView(this);
         imageView.setVisibility(View.GONE);
 
+        // DIKOMENT SEMENTARA
+//        final WindowManager.LayoutParams params = new WindowManager.LayoutParams(
+//                WindowManager.LayoutParams.WRAP_CONTENT,
+//                WindowManager.LayoutParams.WRAP_CONTENT,
+//                WindowManager.LayoutParams.TYPE_PHONE,
+//                WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE,
+//                PixelFormat.TRANSLUCENT);
+        // AKHIR DIKOMEN SEMENTARA
+
+        int layout_parms;
+// MEUNANG YADI
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O)
+
+        {
+            layout_parms = WindowManager.LayoutParams.TYPE_APPLICATION_OVERLAY;
+
+        }
+
+        else {
+
+            layout_parms = WindowManager.LayoutParams.TYPE_PHONE;
+
+        }
+
         final WindowManager.LayoutParams params = new WindowManager.LayoutParams(
                 WindowManager.LayoutParams.WRAP_CONTENT,
                 WindowManager.LayoutParams.WRAP_CONTENT,
-                WindowManager.LayoutParams.TYPE_PHONE,
-                WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE,
+                layout_parms,
+                WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE | WindowManager.LayoutParams.FLAG_LAYOUT_IN_SCREEN | WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE,
                 PixelFormat.TRANSLUCENT);
-
+// AKHIR MEUNANG YADI
         params.gravity = Gravity.TOP | Gravity.CENTER;
         params.x = ((getApplicationContext().getResources().getDisplayMetrics().widthPixels) / 2);
         params.y = ((getApplicationContext().getResources().getDisplayMetrics().heightPixels) / 2);
