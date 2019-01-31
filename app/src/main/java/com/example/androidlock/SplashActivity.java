@@ -163,7 +163,7 @@ public class SplashActivity extends AppCompatActivity {
                         }
                     });
 
-            // Create the AlertDialog object and return it
+            // Create the AlertDialog object and return
             return builder.create();
         }
     }
