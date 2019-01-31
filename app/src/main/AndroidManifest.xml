@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.example.androidlock">
+    package="com.yanrud.androidlock">
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
     <uses-permission android:name="android.permission.GET_TASKS" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
@@ -22,12 +22,12 @@
         tools:ignore="AllowBackup,GoogleAppIndexingWarning">
 
         <service
-            android:name=".Services.AppCheckServices"
+            android:name="com.yanrud.androidlock.Services.AppCheckServices"
             android:exported="false"
             tools:ignore="InnerclassSeparator" />
 
         <activity
-            android:name=".SplashActivity"
+            android:name="com.yanrud.androidlock.SplashActivity"
             android:excludeFromRecents="true"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
@@ -40,35 +40,35 @@
         </activity>
 
         <activity
-            android:name=".PasswordActivity"
+            android:name="com.yanrud.androidlock.PasswordActivity"
             android:excludeFromRecents="true"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
         <activity
-            android:name=".PasswordSetActivity"
+            android:name="com.yanrud.androidlock.PasswordSetActivity"
             android:excludeFromRecents="true"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
         <activity
-            android:name=".PasswordRecoverSetActivity"
+            android:name="com.yanrud.androidlock.PasswordRecoverSetActivity"
             android:excludeFromRecents="true"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
         <activity
-            android:name=".PasswordRecoveryActivity"
+            android:name="com.yanrud.androidlock.PasswordRecoveryActivity"
             android:excludeFromRecents="true"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme"/>
         <activity
             android:configChanges="orientation|screenSize"
-            android:name=".HomeActivity"
+            android:name="com.yanrud.androidlock.HomeActivity"
             android:label="@string/title_activity_home"
             android:theme="@style/AppTheme.NoActionBar" />
 
         <receiver
-            android:name=".Services.BootComplete"
+            android:name="com.yanrud.androidlock.Services.BootComplete"
             android:exported="true"
             tools:ignore="InnerclassSeparator">
             <intent-filter>
